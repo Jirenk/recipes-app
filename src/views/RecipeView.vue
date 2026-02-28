@@ -59,6 +59,7 @@ onMounted(async () => {
 
 const imgUrl = computed(() => meta.value ? coverUrl(meta.value) : null)
 const gradient = computed(() => meta.value ? generateGradient(meta.value.title) : '')
+const imgError = ref(false)
 </script>
 
 <template>
@@ -84,7 +85,7 @@ const gradient = computed(() => meta.value ? generateGradient(meta.value.title) 
     <template v-else-if="meta">
       <!-- 封面 Hero -->
       <div class="recipe-hero">
-        <img v-if="imgUrl" :src="imgUrl" :alt="meta.title" class="recipe-hero__img" />
+        <img v-if="imgUrl && !imgError" :src="imgUrl" :alt="meta.title" class="recipe-hero__img" @error="imgError = true" />
         <div v-else class="recipe-hero__gradient" :style="{ background: gradient }">
           <span class="recipe-hero__name">{{ meta.title }}</span>
         </div>

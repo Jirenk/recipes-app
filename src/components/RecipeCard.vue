@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import type { RecipeMeta } from '../utils/recipes'
 import { coverUrl, generateGradient, formatTime } from '../utils/recipes'
@@ -9,13 +9,20 @@ const router = useRouter()
 
 const imgUrl = computed(() => coverUrl(props.recipe))
 const gradient = computed(() => generateGradient(props.recipe.title))
+const imgError = ref(false)
 </script>
 
 <template>
   <div class="recipe-card card" @click="router.push(`/recipe/${recipe.id}`)">
     <!-- 封面 -->
     <div class="recipe-card__cover">
-      <img v-if="imgUrl" :src="imgUrl" :alt="recipe.title" loading="lazy" />
+      <img
+        v-if="imgUrl && !imgError"
+        :src="imgUrl"
+        :alt="recipe.title"
+        loading="lazy"
+        @error="imgError = true"
+      />
       <div v-else class="recipe-card__placeholder" :style="{ background: gradient }">
         <span class="recipe-card__placeholder-text">{{ recipe.title }}</span>
       </div>
