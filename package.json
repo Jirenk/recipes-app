@@ -1,0 +1,23 @@
+{
+  "name": "recipes-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/generate-index.js && vite",
+    "build": "node scripts/generate-index.js && vite build",
+    "update-index": "node scripts/generate-index.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-pwa": "^1.2.0"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.1",
+    "vue": "^3.5.29",
+    "vue-router": "^4.6.4"
+  }
+}

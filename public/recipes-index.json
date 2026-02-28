@@ -1,0 +1,28 @@
+[
+  {
+    "id": "番茄炒蛋",
+    "title": "番茄炒蛋",
+    "tags": [
+      "快手菜",
+      "家常菜",
+      "素菜"
+    ],
+    "time": 15,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": null
+  },
+  {
+    "id": "红烧肉",
+    "title": "红烧肉",
+    "tags": [
+      "猪肉",
+      "家常菜",
+      "下饭"
+    ],
+    "time": 90,
+    "difficulty": "中等",
+    "servings": 4,
+    "cover": "cover.jpg"
+  }
+]
