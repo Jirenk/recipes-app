@@ -1,28 +1,148 @@
 [
   {
-    "id": "番茄炒蛋",
-    "title": "番茄炒蛋",
+    "id": "姜葱炒蛏子",
+    "title": "姜葱炒蛏子",
     "tags": [
-      "快手菜",
+      "海鲜",
       "家常菜",
-      "素菜"
+      "快手菜"
     ],
-    "time": 15,
+    "time": 45,
+    "difficulty": "中等",
+    "servings": 2,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "无水焗海鲜",
+    "title": "无水焗海鲜（梭子蟹/虾姑）",
+    "tags": [
+      "海鲜",
+      "潮汕",
+      "家常菜"
+    ],
+    "time": 25,
     "difficulty": "简单",
     "servings": 2,
     "cover": null
   },
   {
-    "id": "红烧肉",
-    "title": "红烧肉",
+    "id": "普宁豆酱蒸小杂鱼",
+    "title": "普宁豆酱蒸小杂鱼（小黄鱼、鲳鱼、沙尖）",
     "tags": [
-      "猪肉",
+      "海鲜",
+      "潮汕",
+      "蒸"
+    ],
+    "time": 25,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": null
+  },
+  {
+    "id": "白灼鱿鱼",
+    "title": "白灼鱿鱼",
+    "tags": [
+      "海鲜",
+      "粤菜",
+      "快手菜"
+    ],
+    "time": 25,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "盐焗老蛏",
+    "title": "盐焗老蛏",
+    "tags": [
+      "海鲜",
+      "福建菜",
+      "焗"
+    ],
+    "time": 25,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "花蛤丝瓜榨菜汤",
+    "title": "花蛤丝瓜榨菜汤",
+    "tags": [
+      "汤",
+      "海鲜",
+      "浙东",
+      "快手菜"
+    ],
+    "time": 20,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": null
+  },
+  {
+    "id": "葱姜炒蛏子",
+    "title": "葱姜炒蛏子",
+    "tags": [
+      "海鲜",
       "家常菜",
       "下饭"
     ],
-    "time": 90,
+    "time": 45,
     "difficulty": "中等",
+    "servings": 2,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "葱油蛏子",
+    "title": "葱油蛏子",
+    "tags": [
+      "海鲜",
+      "凉菜",
+      "快手菜"
+    ],
+    "time": 150,
+    "difficulty": "简单",
     "servings": 4,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "蒜蓉烤生蚝",
+    "title": "蒜蓉烤生蚝",
+    "tags": [
+      "海鲜",
+      "烧烤",
+      "蒜蓉"
+    ],
+    "time": 50,
+    "difficulty": "中等",
+    "servings": 2,
+    "cover": "cover.jpg"
+  },
+  {
+    "id": "蒜蓉蒸虾",
+    "title": "蒜蓉蒸虾",
+    "tags": [
+      "海鲜",
+      "台湾",
+      "蒸",
+      "快手菜"
+    ],
+    "time": 20,
+    "difficulty": "简单",
+    "servings": 2,
+    "cover": null
+  },
+  {
+    "id": "豆酱焗鲳鱼",
+    "title": "豆酱焗鲳鱼",
+    "tags": [
+      "海鲜",
+      "潮汕",
+      "焗",
+      "鲳鱼"
+    ],
+    "time": 35,
+    "difficulty": "中等",
+    "servings": 2,
     "cover": "cover.jpg"
   }
 ]
