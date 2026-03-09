@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import type { RecipeMeta } from '../utils/recipes'
-import { fetchIndex, fetchRecipeMarkdown, coverUrl, videoUrl, generateGradient, formatTime } from '../utils/recipes'
+import { fetchIndex, fetchRecipeMarkdown, stripFrontMatter, coverUrl, videoUrl, generateGradient, formatTime } from '../utils/recipes'
 
 const route = useRoute()
 const router = useRouter()
@@ -50,7 +50,7 @@ onMounted(async () => {
       return defaultImgRender(tokens, idx, options, env, self)
     }
 
-    htmlContent.value = md.render(raw)
+    htmlContent.value = md.render(stripFrontMatter(raw))
   } catch (e) {
     error.value = '加载失败，请返回重试'
   } finally {

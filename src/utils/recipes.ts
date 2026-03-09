@@ -38,6 +38,11 @@ export function videoUrl(recipe: RecipeMeta): string | null {
   return `${BASE}recipes/${recipe.id}/${recipe.video}`
 }
 
+/** 去掉 markdown 顶部的 front matter 块，只返回正文供渲染 */
+export function stripFrontMatter(markdown: string): string {
+  return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim()
+}
+
 /** 解析 markdown 中的 ### 级标题，每个标题+正文作为一个步骤 */
 export function extractSteps(markdown: string): RecipeStep[] {
   const content = markdown.replace(/^---[\s\S]*?---\r?\n?/, '').trim()
