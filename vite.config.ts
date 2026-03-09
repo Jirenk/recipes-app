@@ -35,6 +35,15 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
         runtimeCaching: [
           {
+            urlPattern: /\/recipes\/.*\.mp4$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'recipes-video-cache',
+              expiration: { maxEntries: 20, maxAgeSeconds: 30 * 24 * 60 * 60 },
+              rangeRequests: true,
+            },
+          },
+          {
             urlPattern: /\/recipes\//,
             handler: 'CacheFirst',
             options: {

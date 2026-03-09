@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import MarkdownIt from 'markdown-it'
 import type { RecipeMeta } from '../utils/recipes'
-import { fetchIndex, fetchRecipeMarkdown, coverUrl, generateGradient, formatTime } from '../utils/recipes'
+import { fetchIndex, fetchRecipeMarkdown, coverUrl, videoUrl, generateGradient, formatTime } from '../utils/recipes'
 
 const route = useRoute()
 const router = useRouter()
@@ -28,6 +28,7 @@ onMounted(async () => {
       difficulty: null,
       servings: null,
       cover: null,
+      video: null,
     }
 
     // 自定义图片 URL，将相对路径转为 public 资源路径
@@ -58,6 +59,7 @@ onMounted(async () => {
 })
 
 const imgUrl = computed(() => meta.value ? coverUrl(meta.value) : null)
+const vidUrl = computed(() => meta.value ? videoUrl(meta.value) : null)
 const gradient = computed(() => meta.value ? generateGradient(meta.value.title) : '')
 const imgError = ref(false)
 </script>
@@ -93,6 +95,18 @@ const imgError = ref(false)
       </div>
 
       <div class="container recipe-body">
+        <!-- 做菜视频 -->
+        <div v-if="vidUrl" class="recipe-video card">
+          <h2 class="recipe-video__title">做菜视频</h2>
+          <video
+            class="recipe-video__player"
+            controls
+            playsinline
+            preload="metadata"
+            :src="vidUrl"
+          ></video>
+        </div>
+
         <!-- 菜谱基本信息 -->
         <div class="recipe-info card">
           <h1 class="recipe-info__title">{{ meta.title }}</h1>
@@ -219,6 +233,23 @@ const imgError = ref(false)
   gap: 6px;
 }
 
+/* ── 视频卡片 ── */
+.recipe-video {
+  padding: 18px;
+}
+
+.recipe-video__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.recipe-video__player {
+  width: 100%;
+  border-radius: 10px;
+  background: #000;
+}
+
 /* ── 正文卡片 ── */
 .recipe-content {
   padding: 18px;
@@ -277,6 +308,10 @@ const imgError = ref(false)
     flex: 0 0 280px;
     position: sticky;
     top: 70px;
+  }
+
+  .recipe-video {
+    flex: 0 0 100%;
   }
 
   .recipe-content {

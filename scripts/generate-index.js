@@ -61,6 +61,18 @@ async function generateIndex() {
       const raw = await readFile(mdPath, 'utf-8')
       const meta = parseFrontMatter(raw)
 
+      // 扫描目录下的 .mp4 视频文件
+      const dirFiles = await readdir(join(recipesDir, entry.name))
+      const mp4Files = dirFiles.filter(f => f.toLowerCase().endsWith('.mp4'))
+      let video = null
+      if (mp4Files.length === 1) {
+        video = mp4Files[0]
+      } else if (mp4Files.length > 1) {
+        mp4Files.sort()
+        video = mp4Files[0]
+        console.warn(`⚠️ ${entry.name} 下有多个 mp4，取第一个：${video}`)
+      }
+
       recipes.push({
         id: entry.name,
         title: meta.title || entry.name,
@@ -69,13 +81,14 @@ async function generateIndex() {
         difficulty: meta.difficulty || null,
         servings: meta.servings || null,
         cover: meta.cover || null,
+        video,
       })
     } catch {
       console.warn(`跳过 ${entry.name}：找不到 index.md`)
     }
   }
 
-  await writeFile(outputFile, JSON.stringify(recipes, null, 2), 'utf-8')
+  await writeFile(outputFile, `${JSON.stringify(recipes, null, 2)}\n`, 'utf-8')
   console.log(`✅ 已生成菜谱索引，共 ${recipes.length} 个菜谱`)
   recipes.forEach(r => console.log(`   - ${r.title}`))
 }

@@ -10,7 +10,8 @@
     "time": 45,
     "difficulty": "中等",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "84-家常海鲜【姜葱炒蛏子】简单又美味-480P 标清-AVC.mp4"
   },
   {
     "id": "无水焗海鲜",
@@ -23,7 +24,8 @@
     "time": 25,
     "difficulty": "简单",
     "servings": 2,
-    "cover": null
+    "cover": null,
+    "video": null
   },
   {
     "id": "普宁豆酱蒸小杂鱼",
@@ -36,7 +38,8 @@
     "time": 25,
     "difficulty": "简单",
     "servings": 2,
-    "cover": null
+    "cover": null,
+    "video": null
   },
   {
     "id": "白灼鱿鱼",
@@ -49,7 +52,8 @@
     "time": 25,
     "difficulty": "简单",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "1-白灼鱿鱼   只要会煮开水就会做这道菜！-480P 标清-AVC.mp4"
   },
   {
     "id": "盐焗老蛏",
@@ -62,7 +66,8 @@
     "time": 25,
     "difficulty": "简单",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "1-福建特色盐焗老蛏，原汁原味，超级鲜香-480P 标清-AVC.mp4"
   },
   {
     "id": "花蛤丝瓜榨菜汤",
@@ -76,7 +81,8 @@
     "time": 20,
     "difficulty": "简单",
     "servings": 2,
-    "cover": null
+    "cover": null,
+    "video": null
   },
   {
     "id": "葱姜炒蛏子",
@@ -89,7 +95,8 @@
     "time": 45,
     "difficulty": "中等",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "1-大厨教你做葱姜炒蛏子，炒出来一点沙没有，鲜香味美，比饭店还好吃-480P 标清-AVC.mp4"
   },
   {
     "id": "葱油蛏子",
@@ -102,7 +109,8 @@
     "time": 150,
     "difficulty": "简单",
     "servings": 4,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "1-过于简单‼️葱油蛏子只要吃过一次就爱上-480P 标清-AVC.mp4"
   },
   {
     "id": "蒜蓉烤生蚝",
@@ -115,7 +123,8 @@
     "time": 50,
     "difficulty": "中等",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "70-一个视频教你学会烧烤摊的《蒜蓉酱》到底为什么那么香！-480P 标清-AVC.mp4"
   },
   {
     "id": "蒜蓉蒸虾",
@@ -129,7 +138,8 @@
     "time": 20,
     "difficulty": "简单",
     "servings": 2,
-    "cover": null
+    "cover": null,
+    "video": null
   },
   {
     "id": "豆酱焗鲳鱼",
@@ -143,6 +153,7 @@
     "time": 35,
     "difficulty": "中等",
     "servings": 2,
-    "cover": "cover.jpg"
+    "cover": "cover.jpg",
+    "video": "1-豆酱焗鲳鱼，不煎不炸，不加一滴水，酱香浓郁肉嫩滑-480P 标清-AVC.mp4"
   }
 ]

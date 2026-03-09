@@ -6,6 +6,7 @@ export interface RecipeMeta {
   difficulty: string | null
   servings: number | null
   cover: string | null
+  video: string | null
 }
 
 export interface RecipeStep {
@@ -30,6 +31,11 @@ export async function fetchRecipeMarkdown(id: string): Promise<string> {
 export function coverUrl(recipe: RecipeMeta): string | null {
   if (!recipe.cover) return null
   return `${BASE}recipes/${recipe.id}/${recipe.cover}`
+}
+
+export function videoUrl(recipe: RecipeMeta): string | null {
+  if (!recipe.video) return null
+  return `${BASE}recipes/${recipe.id}/${recipe.video}`
 }
 
 /** 解析 markdown 中的 ### 级标题，每个标题+正文作为一个步骤 */
