@@ -1,9 +1,9 @@
 ---
 title: 葱油蛏子
-tags: [海鲜, 家常, 蛏子]
-time: 150
+tags: [家常, 蛏子, 夏季]
+time: 40
 difficulty: 简单
-servings: 4
+servings: 5
 cover: cover.jpg
 ---
 

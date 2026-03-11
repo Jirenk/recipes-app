@@ -1,5 +1,5 @@
 ---
-title: 葱姜炒蛏子
+title: 家常炒蛏子
 tags: [海鲜, 家常, 蛏子]
 time: 45
 difficulty: 中等

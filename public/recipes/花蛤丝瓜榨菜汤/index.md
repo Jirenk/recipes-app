@@ -1,6 +1,6 @@
 ---
 title: 花蛤丝瓜榨菜汤
-tags: [汤, 花甲, 海鲜, 榨菜]
+tags: [汤, 花甲, 榨菜]
 time: 20
 difficulty: 简单
 servings: 2
